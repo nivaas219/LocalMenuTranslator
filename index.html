@@ -1,0 +1,67 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local Menu Translator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 650px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f2f5ed;
+      color: #19372b;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      margin: 16px 0;
+    }
+    textarea, select, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      margin: 8px 0;
+      border-radius: 9px;
+      font-size: 16px;
+    }
+    textarea, select { border: 1px solid #ccc; }
+    button {
+      background: #176b4b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #result { white-space: pre-wrap; line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <h1>🍽️ Local Menu Translator</h1>
+  <p>Understand restaurant menus more easily.</p>
+
+  <section>
+    <label for="menu">Enter menu text</label>
+    <textarea id="menu" rows="5" placeholder="Type your menu here..."></textarea>
+
+    <label for="lang">Translate into</label>
+    <select id="lang">
+      <option value="Tamil">Tamil</option>
+      <option value="English">English</option>
+      <option value="Hindi">Hindi</option>
+    </select>
+
+    <button id="translate">Translate Menu</button>
+    <p id="status">Ready</p>
+  </section>
+
+  <section>
+    <h3>Translation result</h3>
+    <p id="result">Your result will appear here.</p>
+  </section>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
